@@ -15,4 +15,4 @@ MonoBehaviour:
   musicName: Flexion3
   animationName: Capoeira
   notesConfig: {fileID: 4900000, guid: fd66cbeecc824f34a80f7aabb367bbc0, type: 3}
-  speed: 20
+  speed: 150

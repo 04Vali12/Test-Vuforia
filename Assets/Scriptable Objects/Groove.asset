@@ -15,4 +15,4 @@ MonoBehaviour:
   musicName: Groove
   animationName: Groove
   notesConfig: {fileID: 4900000, guid: ab9aaf9922e509d44abb1a224f776d90, type: 3}
-  speed: 20
+  speed: 150

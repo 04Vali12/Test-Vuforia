@@ -15,4 +15,4 @@ MonoBehaviour:
   musicName: DueloDeBaile
   animationName: Duelo
   notesConfig: {fileID: 4900000, guid: e1955e96746bea24c96484d98e5fa20f, type: 3}
-  speed: 20
+  speed: 150
