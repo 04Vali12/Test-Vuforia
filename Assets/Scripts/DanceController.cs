@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +16,9 @@ public class DanceController : MonoBehaviour
 
     [SerializeField]
     private UnityEvent _onDanceSelected;
+    [SerializeField]
+
+    private string _failAnimationName = "Fail";
 
     private SoundData _currentSoundData;
 
@@ -34,9 +39,17 @@ public class DanceController : MonoBehaviour
         _notesManager.StartNoteChart(_currentSoundData.notesConfig, _currentSoundData.speed);
 
     }
-   // public void FailedNote()
-    //{
+    public void FailedNote()
+    {
+        StartCoroutine(ResetDance());
+    }
 
-    //}
+    public IEnumerator ResetDance()
+    {
+        _characterAnimator.Play(_failAnimationName);
+        float failAnimationLength = _characterAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(failAnimationLength);
+        _characterAnimator.Play(_currentSoundData.animationName);
+    }
     
 }

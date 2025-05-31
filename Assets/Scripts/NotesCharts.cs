@@ -13,7 +13,7 @@ public class NoteData
 
 [Serializable]
 
-public class NotesCharts
+public class NoteChart
 {
     public List<NoteData> notes;
 }
